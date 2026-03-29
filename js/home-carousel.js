@@ -14,7 +14,6 @@
   var slides = [];
   var index = 0;
   var timer = null;
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -36,7 +35,7 @@
 
   function startAuto() {
     stopAuto();
-    if (reduceMotion || slides.length < 2 || document.hidden) return;
+    if (slides.length < 2 || document.hidden) return;
     timer = setInterval(function () {
       go(1);
     }, AUTO_MS);
@@ -186,13 +185,6 @@
         });
       })(btns[bi]);
     }
-
-    root.addEventListener("mouseenter", stopAuto);
-    root.addEventListener("mouseleave", startAuto);
-    root.addEventListener("focusin", stopAuto);
-    root.addEventListener("focusout", function (e) {
-      if (!root.contains(e.relatedTarget)) startAuto();
-    });
 
     root.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") {
