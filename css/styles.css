@@ -138,6 +138,16 @@ main{min-height:60vh}
 .gallery-video__ratio{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius);border:1px solid var(--color-border);background:#000}
 .gallery-video__ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .gallery-video__caption{margin:var(--space-xs) 0 0;font-size:.875rem;color:var(--color-text-muted)}
+.team-roster-fieldset{border:0;margin:0;padding:0;min-width:0}
+.team-roster-legend{font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--color-text-muted);margin:0 0 var(--space-sm)}
+.team-roster-toolbar{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:flex-end}
+.team-roster-field{flex:1 1 12rem;min-width:0;display:flex;flex-direction:column;gap:.35rem}
+.team-roster-field--search{flex:2 1 16rem}
+.team-roster-label{font-size:.8125rem;font-weight:600;color:var(--color-brand-dark)}
+.team-roster-input,.team-roster-select{width:100%;max-width:100%;padding:.55rem .75rem;font-size:1rem;font-family:inherit;color:var(--color-text);background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px}
+.team-roster-input:focus,.team-roster-select:focus{outline:2px solid var(--color-accent);outline-offset:1px;border-color:var(--color-brand)}
+.team-roster-status{margin:var(--space-sm) 0 0;font-size:.875rem;color:var(--color-text-muted)}
+.team-filter-empty{grid-column:1/-1;margin:0;padding:var(--space-md);text-align:center;color:var(--color-text-muted)}
 .team-grid{display:grid;gap:var(--space-md);grid-template-columns:1fr}
 @media(min-width:560px){.team-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.team-grid{grid-template-columns:repeat(3,1fr)}}

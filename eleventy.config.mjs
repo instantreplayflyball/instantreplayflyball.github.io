@@ -88,6 +88,19 @@ export default function (eleventyConfig) {
     return videos.filter((v) => youtubeEmbedUrl(v));
   });
 
+  /** Distinct non-empty breeds, sorted A–Z (for roster filter dropdown). */
+  eleventyConfig.addFilter("uniqueBreeds", (members) => {
+    if (!Array.isArray(members)) return [];
+    const set = new Set();
+    for (const m of members) {
+      const b = String(m?.breed ?? "").trim();
+      if (b) set.add(b);
+    }
+    return [...set].sort((a, b) =>
+      a.localeCompare(b, undefined, { sensitivity: "base" })
+    );
+  });
+
   return {
     dir: {
       input: "src",

@@ -4,12 +4,13 @@ title: Athletes | Instant Replay Flyball
 description: Handlers and dogs on the Instant Replay Flyball team.
 current: athletes
 permalink: athletes.html
+athletesFilter: true
 ---
 
 <div class="page-title">
   <div class="page-title__inner">
     <h1>Athletes</h1>
-    <p>Meet members of Instant Replay and their four-legged teammates. Tap a name or photo to open a dog’s profile page.</p>
+    <p>Meet members of Instant Replay and their four-legged teammates. Tap a name or photo to open a dog’s profile page. Use search and filters below to narrow the list.</p>
   </div>
 </div>
 
@@ -18,9 +19,55 @@ permalink: athletes.html
     <div class="section__inner">
       {% set members = team.members | sortTeamMembers(team.rosterSort) %}
       {% if members | length %}
-      <div class="team-grid" aria-live="polite">
+      {% set breeds = team.members | uniqueBreeds %}
+      <div class="team-roster-controls card" style="margin-bottom:var(--space-md);padding:var(--space-md)">
+        <fieldset class="team-roster-fieldset">
+          <legend class="team-roster-legend">Find dogs</legend>
+          <div class="team-roster-toolbar">
+            <div class="team-roster-field team-roster-field--search">
+              <label class="team-roster-label" for="team-roster-search">Search</label>
+              <input
+                type="search"
+                id="team-roster-search"
+                class="team-roster-input"
+                placeholder="Dog name, handler, or breed…"
+                autocomplete="off"
+                enterkeyhint="search"
+              >
+            </div>
+            <div class="team-roster-field">
+              <label class="team-roster-label" for="team-roster-breed">Breed</label>
+              <select id="team-roster-breed" class="team-roster-select">
+                <option value="">All breeds</option>
+                {% for b in breeds %}
+                <option value="{{ b | e }}">{{ b }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="team-roster-field">
+              <label class="team-roster-label" for="team-roster-sort">Sort by</label>
+              <select id="team-roster-sort" class="team-roster-select">
+                {% set rs = team.rosterSort | default("alphabetical") | lower %}
+                <option value="dog" {% if rs != "breed" and rs != "order" %}selected{% endif %}>Dog name (A–Z)</option>
+                <option value="handler">Handler (A–Z)</option>
+                <option value="breed" {% if rs == "breed" %}selected{% endif %}>Breed (A–Z)</option>
+                <option value="order" {% if rs == "order" %}selected{% endif %}>Roster order (sheet)</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <p id="team-roster-status" class="team-roster-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div id="team-roster-grid" class="team-grid" aria-live="polite">
         {% for m in members %}
-        <article class="team-card">
+        <article
+          class="team-card"
+          data-dog="{{ m.dog | trim | e }}"
+          data-handler="{{ m.handler | trim | e }}"
+          data-breed="{{ m.breed | trim | e }}"
+          data-order="{{ m.order | default(999) }}"
+        >
           <div class="team-card__photo">
             {% set photo = m.photo | trim %}
             {% if photo %}
@@ -45,6 +92,7 @@ permalink: athletes.html
           </div>
         </article>
         {% endfor %}
+        <p id="team-roster-filter-empty" class="team-filter-empty" hidden>No dogs match your search or breed filter.</p>
       </div>
       {% else %}
       <p class="team-empty">Roster coming soon.</p>

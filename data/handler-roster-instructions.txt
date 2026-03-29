@@ -1,0 +1,95 @@
+================================================================================
+INSTANT REPLAY FLYBALL — ROSTER & PHOTOS FOR THE NEW WEBSITE
+================================================================================
+
+We are rebuilding the team page. Please add your information in TWO places:
+(1) the roster spreadsheet, and (2) the shared photos folder. Both links are at
+the bottom of this message.
+
+--------------------------------------------------------------------------------
+PART 1 — ROSTER SPREADSHEET (ONE ROW PER DOG)
+--------------------------------------------------------------------------------
+
+• Do not change or delete the header row (row 1: order, handler, dog, breed,
+  bio, photo, photoAlt).
+
+• Add ONE new row per dog you are listing.
+
+• Columns — what to enter:
+
+  order      Optional. Leave blank unless you are asked to use a specific
+             number. (We can sort the list later.)
+
+  handler    Your name (or names) exactly as you want it shown on the website.
+
+  dog        Your dog’s call name — spelling and capitalization as you want it
+             on the site.
+
+  breed      Optional. Examples: Border Collie, Whippet. Leave blank if unsure.
+
+  bio        A short bio (a few sentences). For a second paragraph, press
+             Option+Enter (Mac) or Alt+Enter (Windows) INSIDE the same cell —
+             do not start a new row for paragraph two. (A new row = a different
+             dog.)
+
+  photo      Leave this BLANK for now, OR type only a photo filename you will
+             use in Part 2, for example:  dog-marley.jpg
+             Do not paste long sentences here — only a filename or blank.
+             (No need to type the full path; we use images/dogs/ on our side.)
+
+  photoAlt   Optional but appreciated: one line describing the photo for people
+             who use screen readers, e.g. “Border collie MARLEY at the flyball
+             box.” If you leave it blank, we will use a simple default.
+
+• Do not put photos inside the spreadsheet cells. The site cannot use images
+  embedded in the sheet — use the shared folder in Part 2.
+
+• If you handle more than one dog, add one row per dog (you may repeat your
+  handler name on each row).
+
+--------------------------------------------------------------------------------
+PART 2 — DOG PHOTOS (GOOGLE DRIVE FOLDER)
+--------------------------------------------------------------------------------
+
+• Upload ONE clear photo per dog to the shared “images” folder (link below).
+
+• Good lighting and a roughly square or 4×3 picture work well.
+
+• Name the file so we can match it to your dog, for example:
+    dog-CALLNAME.jpg
+  Use your dog’s call name, lowercase, with hyphens instead of spaces if
+  needed (e.g. dog-peach-juice.jpg).
+
+• If you entered a filename in the spreadsheet “photo” column, use that EXACT
+  name for the file you upload.
+
+• Accepted types: .jpg or .jpeg are ideal; .png is OK. Avoid HEIC if possible
+  (export as JPG from your phone before uploading).
+
+--------------------------------------------------------------------------------
+WHEN YOU ARE DONE
+--------------------------------------------------------------------------------
+
+• Double-check your row: handler, dog, and bio filled in; breed and photoAlt
+  if you have them; “photo” is either blank or matches your uploaded filename.
+
+• You do not need to export or “publish” anything — the web team will pull the
+  sheet and photos when we update the site.
+
+--------------------------------------------------------------------------------
+LINKS
+--------------------------------------------------------------------------------
+
+Roster (Google Sheet):
+https://docs.google.com/spreadsheets/d/1ic_A_vdM1VdXJ59622VUu0iF1VHNA__vrnYHujbY4uo/edit?usp=share_link
+
+Dog photos (Google Drive folder — upload here):
+https://drive.google.com/drive/folders/11ooNL01RvIWPdkUOSVcJT4e0fyOLixNY?usp=share_link
+
+--------------------------------------------------------------------------------
+QUESTIONS
+--------------------------------------------------------------------------------
+
+Reply to this email / message thread, or contact [YOUR NAME / CONTACT HERE].
+
+================================================================================

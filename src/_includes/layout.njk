@@ -52,5 +52,8 @@
   <script id="hero-carousel-data" type="application/json">{{ team.members | json | safe }}</script>
   <script src="/js/home-carousel.js"></script>
   {% endif %}
+  {% if athletesFilter %}
+  <script src="/js/athletes-filter.js"></script>
+  {% endif %}
 </body>
 </html>

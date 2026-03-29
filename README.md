@@ -56,6 +56,8 @@ npm run build
 
 Each dog gets a profile URL **`/dogs/<slug>/`** (slug from `dog` name). Athletes cards link there when a photo is present.
 
+The **Athletes** page includes client-side **search** (dog, handler, breed text), a **breed** dropdown (built from non-empty `breed` fields), and **sort** (dog A–Z, handler A–Z, breed A–Z, or roster order using the `order` field). Default sort matches **`rosterSort`** in **`team.json`** (`alphabetical` → dog A–Z, `breed`, or `order`).
+
 ## Tournaments
 
 Edit **`src/_data/events.json`** (intro, secretary, `upcoming`, `archive`), then rebuild.
