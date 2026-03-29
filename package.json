@@ -5,9 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "start": "eleventy --serve",
-    "preview": "eleventy --serve",
-    "start:legacy": "node dev-server.mjs"
+    "start": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"

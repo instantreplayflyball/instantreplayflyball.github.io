@@ -21,7 +21,7 @@ For a **user/org site** at `https://instantreplayflyball.github.io/`, create a *
 | `npm install` | Install dev dependencies (Eleventy). |
 | `npm run build` | Write the static site to **`_site/`**. |
 | `npm start` / `npm run serve` | Build and serve with live reload (default **http://127.0.0.1:8080**). |
-| `npm run start:legacy` | Simple static server for **`_site/`** after a build (port **5173**). |
+| After `npm run build` | Optional: `npx serve _site` to preview the static output only (no rebuild loop). |
 
 ## Source layout
 
