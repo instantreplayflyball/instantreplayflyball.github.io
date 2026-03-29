@@ -49,7 +49,7 @@
   <script src="/js/main.js"></script>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   {% if carousel %}
-  <script id="hero-carousel-data" type="application/json">{{ team.members | json | safe }}</script>
+  <script id="hero-carousel-data" type="application/json">{{ { members: team.members, homeSlides: homeCarousel.slides | default([]) } | json | safe }}</script>
   <script src="/js/home-carousel.js"></script>
   {% endif %}
   {% if athletesFilter %}

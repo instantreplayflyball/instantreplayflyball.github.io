@@ -33,6 +33,7 @@ For a **user/org site** at `https://instantreplayflyball.github.io/`, create a *
 | `src/_data/team.json` | Roster (`members`, `rosterSort`, …). |
 | `src/_data/events.json` | Tournaments copy and lists. |
 | `src/_data/gallery.json` | Gallery images + optional YouTube `videos`. |
+| `src/_data/homeCarousel.json` | Extra hero carousel slides (`slides` with `src`, `label`, `alt`), merged with roster photos. |
 | `css/`, `js/`, `images/` | Static assets (passthrough). |
 
 ## Customize

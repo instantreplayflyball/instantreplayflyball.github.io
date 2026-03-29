@@ -1,5 +1,6 @@
 /**
- * Hero dog carousel on the home page — photos from build-inlined team roster JSON.
+ * Home hero carousel — team dog photos (from roster) plus optional slides from
+ * src/_data/homeCarousel.json (merged and shuffled at runtime).
  */
 (function () {
   var root = document.getElementById("hero-carousel-root");
@@ -63,27 +64,58 @@
     if (live) live.textContent = "Showing " + s.dog;
   }
 
-  function build(members) {
-    var raw = members.filter(function (m) {
-      return m.photo && String(m.photo).trim();
-    });
-    raw = shuffle(raw).slice(0, MAX_SLIDES);
+  function normalizeSrc(path) {
+    var p = String(path || "").trim();
+    if (!p) return "";
+    if (/^https?:\/\//i.test(p)) return p;
+    return p.charAt(0) === "/" ? p : "/" + p.replace(/^\/+/, "");
+  }
 
-    if (!raw.length) {
+  function slideFromHome(s) {
+    var src = normalizeSrc(s.src);
+    if (!src) return null;
+    var label = String(s.label || "").trim() || "Photo";
+    var alt = String(s.alt || "").trim() || label + " — Instant Replay Flyball";
+    return { dog: label, photo: src, alt: alt };
+  }
+
+  function slideFromMember(m) {
+    var path = String(m.photo || "").trim();
+    if (!path) return null;
+    return {
+      dog: String(m.dog || "").trim() || "Dog",
+      photo: normalizeSrc(path),
+      alt:
+        (m.photoAlt && String(m.photoAlt).trim()) ||
+        String(m.dog || "").trim() + " — Instant Replay Flyball",
+    };
+  }
+
+  function build(members, homeSlides) {
+    members = Array.isArray(members) ? members : [];
+    homeSlides = Array.isArray(homeSlides) ? homeSlides : [];
+
+    var combined = [];
+
+    homeSlides.forEach(function (s) {
+      var slide = slideFromHome(s);
+      if (slide) combined.push(slide);
+    });
+
+    members.forEach(function (m) {
+      var slide = slideFromMember(m);
+      if (slide) combined.push(slide);
+    });
+
+    combined = shuffle(combined).slice(0, MAX_SLIDES);
+
+    if (!combined.length) {
       root.innerHTML =
-        '<div class="hero-carousel__empty"><p>No team photos yet.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
+        '<div class="hero-carousel__empty"><p>No photos yet.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
       return;
     }
 
-    slides = raw.map(function (m) {
-      var path = String(m.photo || "").trim();
-      var src = path.charAt(0) === "/" ? path : "/" + path.replace(/^\/+/, "");
-      return {
-        dog: String(m.dog || "").trim() || "Dog",
-        photo: src,
-        alt: (m.photoAlt && String(m.photoAlt).trim()) || "",
-      };
-    });
+    slides = combined;
 
     var ul = document.createElement("ul");
     ul.className = "hero-carousel__slides";
@@ -158,7 +190,7 @@
   }
 
   root.innerHTML =
-    '<div class="hero-carousel__loading" aria-busy="true">Loading team photos…</div>';
+    '<div class="hero-carousel__loading" aria-busy="true">Loading photos…</div>';
 
   var dataEl = document.getElementById("hero-carousel-data");
   if (!dataEl || !dataEl.textContent.trim()) {
@@ -168,11 +200,23 @@
   }
 
   try {
-    var members = JSON.parse(dataEl.textContent);
-    if (!Array.isArray(members)) throw new Error("not an array");
-    build(members);
+    var raw = JSON.parse(dataEl.textContent);
+    var members;
+    var homeSlides;
+
+    if (Array.isArray(raw)) {
+      members = raw;
+      homeSlides = [];
+    } else if (raw && typeof raw === "object") {
+      members = raw.members || [];
+      homeSlides = raw.homeSlides || [];
+    } else {
+      throw new Error("invalid payload");
+    }
+
+    build(members, homeSlides);
   } catch (e) {
     root.innerHTML =
-      '<div class="hero-carousel__empty"><p>Could not load team photos for the carousel.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
+      '<div class="hero-carousel__empty"><p>Could not load carousel photos.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
   }
 })();
