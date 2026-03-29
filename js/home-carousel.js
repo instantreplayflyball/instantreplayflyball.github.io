@@ -1,6 +1,7 @@
 /**
  * Home hero carousel — team dog photos (from roster) plus optional slides from
  * src/_data/homeCarousel.json (merged and shuffled at runtime).
+ * Payload: GET /carousel-data.json (plain JSON), with inline #hero-carousel-data fallback.
  */
 (function () {
   var root = document.getElementById("hero-carousel-root");
@@ -8,6 +9,7 @@
 
   var AUTO_MS = 5500;
   var MAX_SLIDES = 28;
+  var DATA_URL = "/carousel-data.json";
 
   var slides = [];
   var index = 0;
@@ -42,12 +44,19 @@
 
   function go(delta) {
     if (!slides.length) return;
-    var next = (index + delta + slides.length) % slides.length;
+    var d = Number(delta);
+    if (!isFinite(d)) return;
+    var next = (index + d + slides.length) % slides.length;
     setActive(next);
   }
 
   function setActive(i) {
-    index = i;
+    if (!slides.length) return;
+    var idx =
+      typeof i === "number" && isFinite(i)
+        ? ((Math.floor(i) % slides.length) + slides.length) % slides.length
+        : 0;
+    index = idx;
     var list = root.querySelectorAll(".hero-carousel__slide");
     var nameEl = root.querySelector(".hero-carousel__name");
     var idxEl = root.querySelector(".hero-carousel__idx");
@@ -59,6 +68,7 @@
     }
 
     var s = slides[index];
+    if (!s) return;
     if (nameEl) nameEl.textContent = s.dog;
     if (idxEl) idxEl.textContent = index + 1 + " / " + slides.length;
     if (live) live.textContent = "Showing " + s.dog;
@@ -91,21 +101,32 @@
     };
   }
 
+  function normalizePayload(raw) {
+    if (Array.isArray(raw)) return { members: raw, homeSlides: [] };
+    if (raw && typeof raw === "object") {
+      return {
+        members: Array.isArray(raw.members) ? raw.members : [],
+        homeSlides: Array.isArray(raw.homeSlides) ? raw.homeSlides : [],
+      };
+    }
+    return null;
+  }
+
   function build(members, homeSlides) {
     members = Array.isArray(members) ? members : [];
     homeSlides = Array.isArray(homeSlides) ? homeSlides : [];
 
     var combined = [];
 
-    homeSlides.forEach(function (s) {
-      var slide = slideFromHome(s);
+    for (var hi = 0; hi < homeSlides.length; hi++) {
+      var slide = slideFromHome(homeSlides[hi]);
       if (slide) combined.push(slide);
-    });
+    }
 
-    members.forEach(function (m) {
-      var slide = slideFromMember(m);
-      if (slide) combined.push(slide);
-    });
+    for (var mi = 0; mi < members.length; mi++) {
+      var mslide = slideFromMember(members[mi]);
+      if (mslide) combined.push(mslide);
+    }
 
     combined = shuffle(combined).slice(0, MAX_SLIDES);
 
@@ -155,12 +176,16 @@
 
     setActive(0);
 
-    root.querySelectorAll(".hero-carousel__btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        go(parseInt(btn.getAttribute("data-dir"), 10));
-        startAuto();
-      });
-    });
+    var btns = root.querySelectorAll(".hero-carousel__btn");
+    for (var bi = 0; bi < btns.length; bi++) {
+      (function (btn) {
+        btn.addEventListener("click", function () {
+          var dir = parseInt(btn.getAttribute("data-dir"), 10);
+          go(dir);
+          startAuto();
+        });
+      })(btns[bi]);
+    }
 
     root.addEventListener("mouseenter", stopAuto);
     root.addEventListener("mouseleave", startAuto);
@@ -189,34 +214,60 @@
     startAuto();
   }
 
+  function parseInlinePayload() {
+    var dataEl = document.getElementById("hero-carousel-data");
+    if (!dataEl || !dataEl.textContent.trim()) return null;
+    var raw = JSON.parse(dataEl.textContent.trim());
+    return normalizePayload(raw);
+  }
+
+  function loadPayload(callback) {
+    if (typeof fetch !== "function") {
+      try {
+        var inline = parseInlinePayload();
+        return callback(inline ? null : new Error("no data"), inline);
+      } catch (e) {
+        return callback(e, null);
+      }
+    }
+
+    fetch(DATA_URL, { credentials: "same-origin", cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("fetch " + r.status);
+        return r.json();
+      })
+      .then(function (raw) {
+        var n = normalizePayload(raw);
+        if (!n) throw new Error("invalid payload");
+        callback(null, n);
+      })
+      .catch(function () {
+        try {
+          var inline = parseInlinePayload();
+          callback(inline ? null : new Error("no data"), inline);
+        } catch (e) {
+          callback(e, null);
+        }
+      });
+  }
+
+  function showError() {
+    root.innerHTML =
+      '<div class="hero-carousel__empty"><p>Could not load team photos for the carousel.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
+  }
+
   root.innerHTML =
     '<div class="hero-carousel__loading" aria-busy="true">Loading photos…</div>';
 
-  var dataEl = document.getElementById("hero-carousel-data");
-  if (!dataEl || !dataEl.textContent.trim()) {
-    root.innerHTML =
-      '<div class="hero-carousel__empty"><p>No carousel data on this page.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
-    return;
-  }
-
-  try {
-    var raw = JSON.parse(dataEl.textContent.trim());
-    var members;
-    var homeSlides;
-
-    if (Array.isArray(raw)) {
-      members = raw;
-      homeSlides = [];
-    } else if (raw && typeof raw === "object") {
-      members = raw.members || [];
-      homeSlides = raw.homeSlides || [];
-    } else {
-      throw new Error("invalid payload");
+  loadPayload(function (err, payload) {
+    if (err || !payload) {
+      showError();
+      return;
     }
-
-    build(members, homeSlides);
-  } catch (e) {
-    root.innerHTML =
-      '<div class="hero-carousel__empty"><p>Could not load carousel photos.</p><a class="btn btn--ghost hero-carousel__empty-btn" href="/athletes.html">Athletes</a></div>';
-  }
+    try {
+      build(payload.members, payload.homeSlides);
+    } catch (e2) {
+      showError();
+    }
+  });
 })();

@@ -1,0 +1,6 @@
+---
+permalink: /carousel-data.json
+layout: false
+eleventyExcludeFromCollections: true
+---
+{{ { members: team.members, homeSlides: homeCarousel.slides | default([]) } | json | safe }}
