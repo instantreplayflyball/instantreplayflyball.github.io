@@ -56,6 +56,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
+  /** Safe for `<script type="application/json">` — avoids `</script>` truncating the payload. */
+  eleventyConfig.addFilter("jsonEmbed", (value) =>
+    JSON.stringify(value).replace(/</g, "\\u003c")
+  );
+
   eleventyConfig.addFilter("trim", (s) => String(s ?? "").trim());
 
   eleventyConfig.addFilter("handlerDisplay", handlerDisplayName);

@@ -200,7 +200,7 @@
   }
 
   try {
-    var raw = JSON.parse(dataEl.textContent);
+    var raw = JSON.parse(dataEl.textContent.trim());
     var members;
     var homeSlides;
 
