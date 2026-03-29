@@ -1,8 +1,8 @@
 /**
  * Home hero carousel — team dog photos (from roster) plus optional slides from
  * src/_data/homeCarousel.json (merged and shuffled at runtime).
- * Payload: prefer inline #hero-carousel-data; else fetch carousel-data.json next to
- * this page (works for GitHub project sites; root-relative /carousel-data.json does not).
+ * Payload: window.__HERO_CAROUSEL_PAYLOAD__ (set in layout), then legacy #hero-carousel-data,
+ * then fetch carousel-data.json next to this page.
  */
 (function () {
   var root = document.getElementById("hero-carousel-root");
@@ -215,9 +215,17 @@
   }
 
   function parseInlinePayload() {
-    var dataEl = document.getElementById("hero-carousel-data");
-    if (!dataEl || !dataEl.textContent.trim()) return null;
-    var raw = JSON.parse(dataEl.textContent.trim());
+    var raw = null;
+    if (
+      typeof window.__HERO_CAROUSEL_PAYLOAD__ !== "undefined" &&
+      window.__HERO_CAROUSEL_PAYLOAD__ !== null
+    ) {
+      raw = window.__HERO_CAROUSEL_PAYLOAD__;
+    } else {
+      var dataEl = document.getElementById("hero-carousel-data");
+      if (!dataEl || !dataEl.textContent.trim()) return null;
+      raw = JSON.parse(dataEl.textContent.trim());
+    }
     return normalizePayload(raw);
   }
 

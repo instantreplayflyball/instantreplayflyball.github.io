@@ -49,7 +49,10 @@
   <script src="/js/main.js"></script>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   {% if carousel %}
-  <script id="hero-carousel-data" type="application/json">{{ { members: team.members, homeSlides: homeCarousel.slides | default([]) } | jsonEmbed | safe }}</script>
+  {# Assign JSON as a JS value (not type=application/json) so Safari/WebKit always exposes data; jsonEmbed avoids </script> breaking the tag. #}
+  <script>
+  window.__HERO_CAROUSEL_PAYLOAD__ = {{ { members: team.members, homeSlides: homeCarousel.slides | default([]) } | jsonEmbed | safe }};
+  </script>
   <script src="/js/home-carousel.js"></script>
   {% endif %}
   {% if athletesFilter %}
