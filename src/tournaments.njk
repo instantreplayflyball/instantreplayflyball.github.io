@@ -1,0 +1,69 @@
+---
+layout: layout.njk
+title: Tournaments | Instant Replay Flyball
+description: Upcoming Instant Replay Flyball tournaments and demos.
+current: tournaments
+permalink: tournaments.html
+---
+
+<div class="page-title">
+  <div class="page-title__inner">
+    <h1>Tournaments &amp; events</h1>
+    <p>Schedule and secretary contact are built from <code>src/_data/events.json</code> at build time. Update that file when dates change — then run <code>npm run build</code> (or push to GitHub).</p>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section section--tight">
+    <div class="section__inner">
+      <div class="events-root" aria-live="polite">
+        {% if events.intro %}
+        <p class="section__lead">{{ events.intro }}</p>
+        {% endif %}
+
+        {% if events.secretary and events.secretary.email %}
+        {% set sec = events.secretary %}
+        <div class="muted-banner">
+          <p>{{ (sec.label | default("Contact")) }} — {{ sec.name | default("Secretary") }}:
+            <a href="mailto:{{ sec.email }}">{{ sec.email }}</a>
+          </p>
+        </div>
+        {% endif %}
+
+        {% if events.upcoming and events.upcoming | length %}
+        <h2 class="events-subheading">{{ events.upcomingHeading | default("Upcoming") }}</h2>
+        <ul class="event-list">
+          {% for item in events.upcoming | sortEvents %}
+          <li>
+            <h3>{{ item.title }}</h3>
+            {% if item.detail %}<p>{{ item.detail }}</p>{% endif %}
+            {% if item.badge %}
+            <span class="event-badge" aria-label="Event status">{{ item.badge }}</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if events.archive and events.archive | length %}
+        <h2 class="events-subheading events-subheading--archive">{{ events.archiveHeading | default("Archive") }}</h2>
+        <ul class="event-list event-list--archive">
+          {% for item in events.archive | sortEvents %}
+          <li>
+            <h3>{{ item.title }}</h3>
+            {% if item.detail %}<p>{{ item.detail }}</p>{% endif %}
+            {% if item.badge %}
+            <span class="event-badge" aria-label="Past event status">{{ item.badge }}</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if events.sourceNote %}
+        <p class="events-source-hint">Note: {{ events.sourceNote }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>

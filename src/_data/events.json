@@ -1,0 +1,39 @@
+{
+  "sourceNote": "Tournament contact and 2017 dates migrated from IR_Website/Site_Update_July2017 (Page954.htm). Update emails and dates before publishing.",
+  "intro": "Instant Replay hosts NAFA tournaments in the Caledonia area and has run events at regional fairgrounds. Replace outdated rows below with your current season.",
+  "secretary": {
+    "label": "Tournament entries (as listed on your 2017 site)",
+    "name": "Kelly Ciggaar",
+    "email": "kellyciggaar@gmail.com"
+  },
+  "archiveHeading": "Archive — past hosted weekends (2017 export)",
+  "archive": [
+    {
+      "order": 1,
+      "title": "January 21 & 22, 2017",
+      "detail": "Ancaster Fairgrounds — registration closed (historical).",
+      "badge": "Closed"
+    },
+    {
+      "order": 2,
+      "title": "June 17 & 18, 2017",
+      "detail": "Caledonia Fairgrounds — registration closed (historical).",
+      "badge": "Closed"
+    },
+    {
+      "order": 3,
+      "title": "July 15 & 16, 2017",
+      "detail": "Caledonia Fairgrounds — historical listing from site export.",
+      "badge": "Archive"
+    }
+  ],
+  "upcomingHeading": "Upcoming",
+  "upcoming": [
+    {
+      "order": 1,
+      "title": "Next Instant Replay tournament",
+      "detail": "Dates and venue TBA. Follow team social channels or email the contacts below.",
+      "badge": "TBA"
+    }
+  ]
+}

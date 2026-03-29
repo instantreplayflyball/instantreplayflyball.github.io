@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }}{% else %}Instant Replay Flyball | Caledonia, Ontario{% endif %}</title>
+  {% if description %}
+  <meta name="description" content="{{ description }}">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo logo--with-mark" href="/">
+        <img class="logo__mark" src="/images/logo-instant-replay-flyball.svg" width="277" height="136" alt="Instant Replay Flyball" decoding="async">
+        <small class="logo__tagline">Flyball Team · Caledonia, ON</small>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-menu" aria-label="Primary">
+        <ul>
+          <li><a href="/" {% if current == "home" %}aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="/athletes.html" {% if current == "athletes" %}aria-current="page"{% endif %}>Athletes</a></li>
+          <li><a href="/tournaments.html" {% if current == "tournaments" %}aria-current="page"{% endif %}>Tournaments</a></li>
+          <li><a href="/gallery.html" {% if current == "gallery" %}aria-current="page"{% endif %}>Pictures &amp; Video</a></li>
+          <li><a href="/about.html" {% if current == "about" %}aria-current="page"{% endif %}>About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>© <span id="y"></span> Instant Replay Flyball Team · Caledonia, Ontario</p>
+      <div class="social">
+        <a href="https://www.facebook.com/" rel="noopener noreferrer">Facebook</a>
+        <a href="https://x.com/" rel="noopener noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  {% if carousel %}
+  <script id="hero-carousel-data" type="application/json">{{ team.members | json | safe }}</script>
+  <script src="/js/home-carousel.js"></script>
+  {% endif %}
+</body>
+</html>

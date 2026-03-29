@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+title: Athletes | Instant Replay Flyball
+description: Handlers and dogs on the Instant Replay Flyball team.
+current: athletes
+permalink: athletes.html
+---
+
+<div class="page-title">
+  <div class="page-title__inner">
+    <h1>Athletes</h1>
+    <p>Meet members of Instant Replay and their four-legged teammates. The roster is built from <code>src/_data/team.json</code> at build time. Dogs are listed <strong>A–Z by name</strong> by default; set <code>rosterSort</code> to <code>order</code> (legacy order) or <code>breed</code> (needs optional <code>breed</code> on each dog). Each dog with a photo has a profile page under <code>/dogs/&lt;slug&gt;/</code>. Photos: July&nbsp;2017 <code>IR_Website</code> export — run <code>node scripts/sync-dog-photos.mjs</code> after moving the legacy folder to re-link.</p>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section section--tight">
+    <div class="section__inner">
+      {% set members = team.members | sortTeamMembers(team.rosterSort) %}
+      {% if members | length %}
+      <div class="team-grid" aria-live="polite">
+        {% for m in members %}
+        <article class="team-card">
+          <div class="team-card__photo">
+            {% set photo = m.photo | trim %}
+            {% if photo %}
+            <a href="/dogs/{{ m | dogSlug }}/" class="team-card__photo-link" aria-label="Profile: {{ m.dog }}">
+              <img src="/{{ photo }}" alt="{{ m.photoAlt | default(m.dog + ' photo') }}" loading="lazy" decoding="async">
+            </a>
+            {% else %}
+            Add photo
+            {% endif %}
+          </div>
+          <div class="team-card__body">
+            <h3><a href="/dogs/{{ m | dogSlug }}/">{{ m.dog }}</a></h3>
+            {% if m.breed | trim %}
+            <p class="team-card__breed">{{ m.breed }}</p>
+            {% endif %}
+            {% for line in m.bio | bioLines %}
+            <p>{{ line }}</p>
+            {% endfor %}
+            {% if m.handler | trim %}
+            <p class="team-card__meta">{{ m.handler }}</p>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="team-empty">No dogs listed yet. Add entries to <code>src/_data/team.json</code>.</p>
+      {% endif %}
+    </div>
+  </section>
+</main>

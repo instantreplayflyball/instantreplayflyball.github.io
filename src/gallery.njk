@@ -1,0 +1,73 @@
+---
+layout: layout.njk
+title: Pictures & Video | Instant Replay Flyball
+description: Toronto Raptors halftime demos, club photos, and video — Instant Replay Flyball (instantreplayflyball.org).
+current: gallery
+permalink: gallery.html
+---
+
+<div class="page-title">
+  <div class="page-title__inner">
+    <h1>Pictures &amp; video</h1>
+    <p class="page-title__note">Copy and spirit match the live <a href="https://www.instantreplayflyball.org/pictures--video" rel="noopener noreferrer">Pictures &amp; Video</a> page on <cite>instantreplayflyball.org</cite>.</p>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section section--tight">
+    <div class="section__inner">
+      <div class="gallery-intro">
+        <img class="gallery-intro__ball" src="/images/brand-tennis-ball.png" width="124" height="124" alt="Instant Replay tennis ball mark" decoding="async">
+        <div class="gallery-intro__body">
+          <p>Quite often, a few times during the winter months, we are given the privilege to perform for the Toronto Raptors and their fans during halftime. It’s very exciting for all involved. Take a look at some of the moments of the years during these demos and other pictures of our club.</p>
+          <p class="gallery-intro__official"><a class="gallery-intro__link" href="https://www.instantreplayflyball.org/pictures--video" rel="noopener noreferrer">Open the full Pictures &amp; Video page on instantreplayflyball.org</a> for the current gallery on the main team site.</p>
+          <p class="gallery-intro__archive">The photo grid below is built from our July&nbsp;2017 site export. Re-sync images with <code>node scripts/sync-gallery.mjs</code>; add YouTube clips in <code>src/_data/gallery.json</code> (<code>videos</code> → <code>youtubeId</code> or <code>url</code>).</p>
+        </div>
+      </div>
+
+      <div aria-live="polite">
+        {% set images = gallery.images | default([]) %}
+        {% set videos = gallery.videos | default([]) %}
+        {% set vidCount = videos | length %}
+        {% set imgCount = images | length %}
+        {% if imgCount == 0 and vidCount == 0 %}
+        <p class="gallery-empty">No gallery items yet. Run <code>node scripts/sync-gallery.mjs</code> (with your IR_Website export) or edit <code>src/_data/gallery.json</code>.</p>
+        {% else %}
+          {% if imgCount > 0 %}
+          <div class="gallery-grid" role="list">
+            {% for item in images %}
+            {% set src = item.src | trim %}
+            {% if src %}
+            <div class="gallery-item" role="listitem">
+              <img src="/{{ src }}" alt="{{ item.alt | default('Instant Replay Flyball gallery photo') }}" loading="lazy" decoding="async">
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% set embeddable = videos | filterYoutubeEmbeds %}
+          {% if embeddable | length %}
+          <div class="gallery-videos">
+            <h2 class="gallery-videos__heading">Video</h2>
+            {% for v in embeddable %}
+            {% set url = v | youtubeEmbed %}
+            {% set cap = v.title | trim %}
+            <div class="gallery-video">
+              <div class="gallery-video__ratio">
+                <iframe src="{{ url }}" title="{{ cap | default('Instant Replay video') }}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy"></iframe>
+              </div>
+              {% if cap %}
+              <p class="gallery-video__caption">{{ cap }}</p>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% elif vidCount > 0 %}
+          <p class="gallery-video-hint">Add a valid <code>youtubeId</code> or YouTube <code>url</code> for each entry in <code>src/_data/gallery.json</code> → <code>videos</code>.</p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>
