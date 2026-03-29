@@ -25,7 +25,7 @@ permalink: "dogs/{{ member | dogSlug }}/index.html"
           {% if photo %}
           <img src="/{{ photo }}" alt="{{ member.photoAlt | default(member.dog + ' photo') }}" loading="eager" decoding="async">
           {% else %}
-          Add photo
+          Photo coming soon
           {% endif %}
         </div>
         <div class="team-card__body">

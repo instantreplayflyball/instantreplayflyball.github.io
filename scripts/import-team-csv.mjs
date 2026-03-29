@@ -168,7 +168,7 @@ function main() {
       order,
       handler,
       dog,
-      bio: bio || `Races with Instant Replay (Caledonia, Ontario).`,
+      bio: bio || `Races with Instant Replay Flyball in Caledonia, Ontario.`,
       photo,
       photoAlt,
     };

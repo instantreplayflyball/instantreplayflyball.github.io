@@ -21,7 +21,7 @@ permalink: gallery.html
         <div class="gallery-intro__body">
           <p>Quite often, a few times during the winter months, we are given the privilege to perform for the Toronto Raptors and their fans during halftime. It’s very exciting for all involved. Take a look at some of the moments of the years during these demos and other pictures of our club.</p>
           <p class="gallery-intro__official"><a class="gallery-intro__link" href="https://www.instantreplayflyball.org/pictures--video" rel="noopener noreferrer">Open the full Pictures &amp; Video page on instantreplayflyball.org</a> for the current gallery on the main team site.</p>
-          <p class="gallery-intro__archive">The photo grid below is built from our July&nbsp;2017 site export. Re-sync images with <code>node scripts/sync-gallery.mjs</code>; add YouTube clips in <code>src/_data/gallery.json</code> (<code>videos</code> → <code>youtubeId</code> or <code>url</code>).</p>
+          <p class="gallery-intro__archive">Below are club photos from our archive, including Raptors halftime demos and other team moments.</p>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ permalink: gallery.html
         {% set vidCount = videos | length %}
         {% set imgCount = images | length %}
         {% if imgCount == 0 and vidCount == 0 %}
-        <p class="gallery-empty">No gallery items yet. Run <code>node scripts/sync-gallery.mjs</code> (with your IR_Website export) or edit <code>src/_data/gallery.json</code>.</p>
+        <p class="gallery-empty">Gallery photos and videos will appear here when available.</p>
         {% else %}
           {% if imgCount > 0 %}
           <div class="gallery-grid" role="list">
@@ -64,7 +64,7 @@ permalink: gallery.html
             {% endfor %}
           </div>
           {% elif vidCount > 0 %}
-          <p class="gallery-video-hint">Add a valid <code>youtubeId</code> or YouTube <code>url</code> for each entry in <code>src/_data/gallery.json</code> → <code>videos</code>.</p>
+          <p class="gallery-video-hint">Some video entries could not be embedded. Check back later.</p>
           {% endif %}
         {% endif %}
       </div>

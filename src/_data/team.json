@@ -6,7 +6,7 @@
       "order": 1,
       "handler": "Tammy & Henry Frank",
       "dog": "JAG",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-jag.jpg",
       "photoAlt": "JAG — Tammy & Henry Frank"
     },
@@ -14,7 +14,7 @@
       "order": 2,
       "handler": "Tammy & Henry Frank",
       "dog": "QUEST",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-quest.jpg",
       "photoAlt": "QUEST — Tammy & Henry Frank"
     },
@@ -22,7 +22,7 @@
       "order": 3,
       "handler": "Tammy & Henry Frank",
       "dog": "EDGE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-edge.jpg",
       "photoAlt": "EDGE — Tammy & Henry Frank"
     },
@@ -30,7 +30,7 @@
       "order": 4,
       "handler": "Tammy & Henry Frank",
       "dog": "BOSTON (“BOSS”)",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-boston-boss.jpg",
       "photoAlt": "BOSTON (Boss) — Tammy & Henry Frank"
     },
@@ -38,7 +38,7 @@
       "order": 5,
       "handler": "Kelly Ciggaar & Marty Murdock",
       "dog": "MYLES",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-myles.jpg",
       "photoAlt": "MYLES — Kelly Ciggaar & Marty Murdock"
     },
@@ -46,7 +46,7 @@
       "order": 6,
       "handler": "Kelly Ciggaar & Marty Murdock",
       "dog": "DICE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-dice.jpg",
       "photoAlt": "DICE — Kelly Ciggaar & Marty Murdock"
     },
@@ -54,7 +54,7 @@
       "order": 7,
       "handler": "Kelly Ciggaar & Marty Murdock",
       "dog": "JAX",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-jax.jpg",
       "photoAlt": "JAX — Kelly Ciggaar & Marty Murdock"
     },
@@ -62,7 +62,7 @@
       "order": 8,
       "handler": "Kelly Ciggaar & Marty Murdock",
       "dog": "JIVE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-jive.jpg",
       "photoAlt": "JIVE — Kelly Ciggaar & Marty Murdock"
     },
@@ -70,7 +70,7 @@
       "order": 9,
       "handler": "Marg",
       "dog": "VEGAS",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-vegas.jpg",
       "photoAlt": "VEGAS — Marg"
     },
@@ -78,7 +78,7 @@
       "order": 10,
       "handler": "Marg",
       "dog": "MICK",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-mick.jpg",
       "photoAlt": "MICK — Marg"
     },
@@ -86,7 +86,7 @@
       "order": 11,
       "handler": "Marg",
       "dog": "FLETCHER",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-fletcher.jpg",
       "photoAlt": "FLETCHER — Marg"
     },
@@ -94,7 +94,7 @@
       "order": 12,
       "handler": "Marg",
       "dog": "GEMMA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-gemma.jpg",
       "photoAlt": "GEMMA — Marg"
     },
@@ -102,7 +102,7 @@
       "order": 13,
       "handler": "Theresa",
       "dog": "INFINITI",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-infiniti.jpg",
       "photoAlt": "INFINITI — Theresa"
     },
@@ -110,7 +110,7 @@
       "order": 14,
       "handler": "Theresa",
       "dog": "NOVEL",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-novel.jpg",
       "photoAlt": "NOVEL — Theresa"
     },
@@ -118,7 +118,7 @@
       "order": 15,
       "handler": "Theresa",
       "dog": "SAXEN",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-saxen.jpg",
       "photoAlt": "SAXEN — Theresa"
     },
@@ -126,7 +126,7 @@
       "order": 16,
       "handler": "Theresa",
       "dog": "TEVA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-teva.jpg",
       "photoAlt": "TEVA — Theresa"
     },
@@ -134,7 +134,7 @@
       "order": 17,
       "handler": "Theresa",
       "dog": "WiFi",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-wifi.jpg",
       "photoAlt": "WiFi — Theresa"
     },
@@ -142,7 +142,7 @@
       "order": 18,
       "handler": "Theresa",
       "dog": "THRILL",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-thrill.jpg",
       "photoAlt": "THRILL — Theresa"
     },
@@ -150,7 +150,7 @@
       "order": 19,
       "handler": "Chris",
       "dog": "SETNA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-setna.jpg",
       "photoAlt": "SETNA — Chris"
     },
@@ -158,7 +158,7 @@
       "order": 20,
       "handler": "Chris",
       "dog": "DAKRA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-dakra.jpg",
       "photoAlt": "DAKRA — Chris"
     },
@@ -166,7 +166,7 @@
       "order": 21,
       "handler": "Chris",
       "dog": "TALOS",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-talos.jpg",
       "photoAlt": "TALOS — Chris"
     },
@@ -174,7 +174,7 @@
       "order": 22,
       "handler": "Ridley",
       "dog": "PROPHET",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-prophet.jpg",
       "photoAlt": "PROPHET — Ridley"
     },
@@ -182,7 +182,7 @@
       "order": 23,
       "handler": "Ridley",
       "dog": "GRIMM",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-grimm.jpg",
       "photoAlt": "GRIMM — Ridley"
     },
@@ -190,7 +190,7 @@
       "order": 24,
       "handler": "Ridley",
       "dog": "CAMOUFLAGE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-camouflage.jpg",
       "photoAlt": "CAMOUFLAGE — Ridley"
     },
@@ -198,7 +198,7 @@
       "order": 25,
       "handler": "Kate",
       "dog": "EVE-L",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-eve-l.jpg",
       "photoAlt": "EVE-L — Kate"
     },
@@ -206,7 +206,7 @@
       "order": 26,
       "handler": "Lucin",
       "dog": "PANTHER",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-panther.jpg",
       "photoAlt": "PANTHER — Lucin"
     },
@@ -214,7 +214,7 @@
       "order": 27,
       "handler": "Lucin",
       "dog": "ERROW",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-errow.jpg",
       "photoAlt": "ERROW — Lucin"
     },
@@ -222,7 +222,7 @@
       "order": 28,
       "handler": "Lucin",
       "dog": "FYURIE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-fyurie.jpg",
       "photoAlt": "FYURIE — Lucin"
     },
@@ -238,7 +238,7 @@
       "order": 30,
       "handler": "Bob",
       "dog": "SCOTTY",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-scotty.jpg",
       "photoAlt": "SCOTTY — Bob"
     },
@@ -246,7 +246,7 @@
       "order": 31,
       "handler": "Lauren",
       "dog": "PEACH JUICE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-peach-juice.jpg",
       "photoAlt": "PEACH JUICE — Lauren"
     },
@@ -254,7 +254,7 @@
       "order": 32,
       "handler": "Lauren",
       "dog": "TRIX",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-trix.jpg",
       "photoAlt": "TRIX — Lauren"
     },
@@ -262,7 +262,7 @@
       "order": 33,
       "handler": "Lauren",
       "dog": "APPLE SNAPPLE",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-apple-snapple.jpg",
       "photoAlt": "APPLE SNAPPLE — Lauren"
     },
@@ -270,7 +270,7 @@
       "order": 34,
       "handler": "Lauren",
       "dog": "CREDIT",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-credit.jpg",
       "photoAlt": "CREDIT — Lauren"
     },
@@ -278,7 +278,7 @@
       "order": 35,
       "handler": "Mary",
       "dog": "CASTAWAY",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-castaway.jpg",
       "photoAlt": "CASTAWAY — Mary"
     },
@@ -286,7 +286,7 @@
       "order": 36,
       "handler": "Mary",
       "dog": "ESME",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-esme.jpg",
       "photoAlt": "ESME — Mary"
     },
@@ -294,7 +294,7 @@
       "order": 37,
       "handler": "Mary",
       "dog": "VANQUISH",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-vanquish.jpg",
       "photoAlt": "VANQUISH — Mary"
     },
@@ -302,7 +302,7 @@
       "order": 38,
       "handler": "Jay-Jay",
       "dog": "FUN",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "",
       "photoAlt": ""
     },
@@ -310,7 +310,7 @@
       "order": 39,
       "handler": "Jay-Jay",
       "dog": "SIR",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "",
       "photoAlt": ""
     },
@@ -318,7 +318,7 @@
       "order": 40,
       "handler": "Alumni",
       "dog": "LEROY",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-leroy.jpg",
       "photoAlt": "LEROY — Alumni"
     },
@@ -326,7 +326,7 @@
       "order": 41,
       "handler": "Alumni",
       "dog": "RUMOUR",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-rumour.jpg",
       "photoAlt": "RUMOUR — Alumni"
     },
@@ -334,7 +334,7 @@
       "order": 42,
       "handler": "Alumni",
       "dog": "PAISLEY",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-paisley.jpg",
       "photoAlt": "PAISLEY — Alumni"
     },
@@ -342,7 +342,7 @@
       "order": 43,
       "handler": "Alumni",
       "dog": "PHEONIX",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-pheonix.jpg",
       "photoAlt": "PHEONIX — Alumni"
     },
@@ -350,7 +350,7 @@
       "order": 44,
       "handler": "Alumni",
       "dog": "KAYZA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-kayza.jpg",
       "photoAlt": "KAYZA — Alumni"
     },
@@ -358,7 +358,7 @@
       "order": 45,
       "handler": "Kelly & Dave",
       "dog": "KELLA",
-      "bio": "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.",
+      "bio": "Races with Instant Replay Flyball in Caledonia, Ontario.",
       "photo": "images/dogs/dog-kella.jpg",
       "photoAlt": "KELLA — Kelly & Dave"
     }

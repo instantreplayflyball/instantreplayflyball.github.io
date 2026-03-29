@@ -1,12 +1,11 @@
 {
-  "sourceNote": "Tournament contact and 2017 dates migrated from IR_Website/Site_Update_July2017 (Page954.htm). Update emails and dates before publishing.",
-  "intro": "Instant Replay hosts NAFA tournaments in the Caledonia area and has run events at regional fairgrounds. Replace outdated rows below with your current season.",
+  "intro": "Instant Replay hosts NAFA tournaments in the Caledonia area and has run events at regional fairgrounds.",
   "secretary": {
-    "label": "Tournament entries (as listed on your 2017 site)",
+    "label": "Tournament entries",
     "name": "Kelly Ciggaar",
     "email": "kellyciggaar@gmail.com"
   },
-  "archiveHeading": "Archive — past hosted weekends (2017 export)",
+  "archiveHeading": "Archive — past hosted weekends",
   "archive": [
     {
       "order": 1,

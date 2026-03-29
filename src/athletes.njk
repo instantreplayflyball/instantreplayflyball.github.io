@@ -9,7 +9,7 @@ permalink: athletes.html
 <div class="page-title">
   <div class="page-title__inner">
     <h1>Athletes</h1>
-    <p>Meet members of Instant Replay and their four-legged teammates. The roster is built from <code>src/_data/team.json</code> at build time. Dogs are listed <strong>A–Z by name</strong> by default; set <code>rosterSort</code> to <code>order</code> (legacy order) or <code>breed</code> (needs optional <code>breed</code> on each dog). Each dog with a photo has a profile page under <code>/dogs/&lt;slug&gt;/</code>. Photos: July&nbsp;2017 <code>IR_Website</code> export — run <code>node scripts/sync-dog-photos.mjs</code> after moving the legacy folder to re-link.</p>
+    <p>Meet members of Instant Replay and their four-legged teammates. Tap a name or photo to open a dog’s profile page.</p>
   </div>
 </div>
 
@@ -28,7 +28,7 @@ permalink: athletes.html
               <img src="/{{ photo }}" alt="{{ m.photoAlt | default(m.dog + ' photo') }}" loading="lazy" decoding="async">
             </a>
             {% else %}
-            Add photo
+            Photo coming soon
             {% endif %}
           </div>
           <div class="team-card__body">
@@ -47,7 +47,7 @@ permalink: athletes.html
         {% endfor %}
       </div>
       {% else %}
-      <p class="team-empty">No dogs listed yet. Add entries to <code>src/_data/team.json</code>.</p>
+      <p class="team-empty">Roster coming soon.</p>
       {% endif %}
     </div>
   </section>

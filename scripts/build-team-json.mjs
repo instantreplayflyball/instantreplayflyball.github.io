@@ -13,8 +13,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 
-const bio =
-  "Races with Instant Replay (Caledonia, Ontario). Personal bios were mostly photos on the legacy site — edit this line in src/_data/team.json anytime.";
+const bio = "Races with Instant Replay Flyball in Caledonia, Ontario.";
 
 const rows = [
   ["Tammy & Henry Frank", "JAG"],
