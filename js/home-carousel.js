@@ -9,7 +9,7 @@
   if (!root) return;
 
   var AUTO_MS = 5500;
-  var MAX_SLIDES = 28;
+  var MAX_SLIDES = 40;
 
   var slides = [];
   var index = 0;

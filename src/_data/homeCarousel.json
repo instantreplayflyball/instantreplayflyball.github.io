@@ -1,5 +1,5 @@
 {
-  "_note": "Home hero carousel extras (e.g. from legacy Wix). Shuffled with team dog photos. Paths are site-relative.",
+  "_note": "Files live in images/home/. Add images there and list them here (or re-run: python3 scripts/sync-home-carousel-slides.py).",
   "slides": [
     {
       "src": "images/home/hero-01.jpg",
@@ -15,6 +15,131 @@
       "src": "images/home/hero-04.png",
       "label": "Halftime & demos",
       "alt": "Instant Replay Flyball — event photo"
+    },
+    {
+      "src": "images/home/facebook-01.jpg",
+      "label": "Club photos",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/facebook-02.jpg",
+      "label": "At the track",
+      "alt": "Instant Replay Flyball — at the track"
+    },
+    {
+      "src": "images/home/facebook-03.jpg",
+      "label": "Racing",
+      "alt": "Instant Replay Flyball — racing"
+    },
+    {
+      "src": "images/home/facebook-04.jpg",
+      "label": "Team",
+      "alt": "Instant Replay Flyball — team"
+    },
+    {
+      "src": "images/home/facebook-05.jpg",
+      "label": "Instant Replay",
+      "alt": "Instant Replay Flyball"
+    },
+    {
+      "src": "images/home/facebook-06.jpg",
+      "label": "Flyball",
+      "alt": "Instant Replay Flyball — flyball"
+    },
+    {
+      "src": "images/home/104155538_3077728752284622_8433649280780103259_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/43878086_1963797693677739_3820883299719446528_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/488953987_1196864249107554_1115042011276716793_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/489840749_9588262681231164_1500192651965208771_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/490033355_9588262674564498_587285403088748342_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/553520386_24672512045712981_626475278582995607_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/555538903_24687304684233717_5642843059837761237_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/555622074_24701045139526338_7669263098611922772_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/555627723_24700501772914008_5781547657081438154_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/555669250_24711340698496782_4027054968022060359_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/555718727_24711340695163449_9010789424762792732_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/556037279_24700501846247334_388366125894650480_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/556039437_24701891242775061_4230119650694456561_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/556338100_24700513369579515_245497785930682039_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/572978244_1379367770857200_8424500644985765963_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/68350157_2425990594125111_9212622876174188544_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/72552169_2534165899974246_7973477515098324992_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/80741992_2710677202323114_7941736852082393088_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
+    },
+    {
+      "src": "images/home/83365235_2749868275070673_2934657432875433984_n.jpg",
+      "label": "Club photo",
+      "alt": "Instant Replay Flyball — club photo"
     }
   ]
 }
