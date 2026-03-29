@@ -11,7 +11,7 @@ permalink: "dogs/{{ member | dogSlug }}/index.html"
     <p class="section__lead" style="margin-bottom:var(--space-sm);"><a href="/athletes.html">← All athletes</a></p>
     <h1>{{ member.dog }}</h1>
     {% if member.handler | trim %}
-    <p>{{ member.handler }}</p>
+    <p>{{ member.handler | handlerDisplay }}</p>
     {% endif %}
   </div>
 </div>

@@ -87,7 +87,7 @@ athletesFilter: true
             <p>{{ line }}</p>
             {% endfor %}
             {% if m.handler | trim %}
-            <p class="team-card__meta">{{ m.handler }}</p>
+            <p class="team-card__meta">{{ m.handler | handlerDisplay }}</p>
             {% endif %}
           </div>
         </article>

@@ -1,4 +1,5 @@
 import { slugifyDogName } from "./scripts/lib/slug-dog-name.mjs";
+import { handlerDisplayName } from "./scripts/lib/handler-display.mjs";
 
 function sortKeyDogName(dog) {
   const s = String(dog || "").toUpperCase();
@@ -56,6 +57,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
   eleventyConfig.addFilter("trim", (s) => String(s ?? "").trim());
+
+  eleventyConfig.addFilter("handlerDisplay", handlerDisplayName);
 
   eleventyConfig.addFilter("dogSlug", memberDogSlug);
 
