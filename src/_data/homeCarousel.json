@@ -12,19 +12,9 @@
       "alt": "Instant Replay Flyball — racing"
     },
     {
-      "src": "images/home/hero-03.jpg",
-      "label": "Club",
-      "alt": "Instant Replay Flyball"
-    },
-    {
       "src": "images/home/hero-04.png",
       "label": "Halftime & demos",
       "alt": "Instant Replay Flyball — event photo"
-    },
-    {
-      "src": "images/home/hero-05.png",
-      "label": "Instant Replay",
-      "alt": "Instant Replay Flyball"
     }
   ]
 }
