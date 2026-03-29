@@ -1,7 +1,8 @@
 /**
  * Home hero carousel — team dog photos (from roster) plus optional slides from
  * src/_data/homeCarousel.json (merged and shuffled at runtime).
- * Payload: GET /carousel-data.json (plain JSON), with inline #hero-carousel-data fallback.
+ * Payload: prefer inline #hero-carousel-data; else fetch carousel-data.json next to
+ * this page (works for GitHub project sites; root-relative /carousel-data.json does not).
  */
 (function () {
   var root = document.getElementById("hero-carousel-root");
@@ -9,7 +10,6 @@
 
   var AUTO_MS = 5500;
   var MAX_SLIDES = 28;
-  var DATA_URL = "/carousel-data.json";
 
   var slides = [];
   var index = 0;
@@ -222,16 +222,27 @@
   }
 
   function loadPayload(callback) {
-    if (typeof fetch !== "function") {
+    function tryInline() {
       try {
-        var inline = parseInlinePayload();
-        return callback(inline ? null : new Error("no data"), inline);
+        return parseInlinePayload();
       } catch (e) {
-        return callback(e, null);
+        return null;
       }
     }
 
-    fetch(DATA_URL, { credentials: "same-origin", cache: "no-cache" })
+    var first = tryInline();
+    if (first) {
+      callback(null, first);
+      return;
+    }
+
+    if (typeof fetch !== "function") {
+      callback(new Error("no data"), null);
+      return;
+    }
+
+    var dataUrl = new URL("carousel-data.json", window.location.href).href;
+    fetch(dataUrl, { credentials: "same-origin", cache: "no-cache" })
       .then(function (r) {
         if (!r.ok) throw new Error("fetch " + r.status);
         return r.json();
@@ -242,12 +253,7 @@
         callback(null, n);
       })
       .catch(function () {
-        try {
-          var inline = parseInlinePayload();
-          callback(inline ? null : new Error("no data"), inline);
-        } catch (e) {
-          callback(e, null);
-        }
+        callback(new Error("no data"), null);
       });
   }
 
