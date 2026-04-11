@@ -4,3 +4,6 @@ _site/
 
 # Local Wix / legacy export — not part of the GitHub Pages site
 Old_Site Files/
+
+# iPhone HEIC in carousel folder — use JPEG on site (convert with sips)
+images/home/*.HEIC
